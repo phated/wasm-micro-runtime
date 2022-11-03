@@ -2765,7 +2765,9 @@ wasm_runtime_init_wasi(WASMModuleInstanceCommon *module_inst,
 
     uvwasi_errno_t init_err = uvwasi_init(uvwasi, &init_options);
     if (UVWASI_ESUCCESS != init_err) {
-        set_error_buf(error_buf, error_buf_size, os_printf("uvwasi init failed. Error code: %d", init_err));
+        snprintf(error_buf, error_buf_size,
+            "uvwasi init failed. Error code: %d",
+            init_err);
         goto fail;
     }
 
