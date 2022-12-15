@@ -28,7 +28,7 @@ endif()
 ## uvwasi
 FetchContent_Declare(
     uvwasi
-    GIT_REPOSITORY https://github.com/nodejs/uvwasi.git
+    GIT_REPOSITORY https://github.com/phated/uvwasi.git
     GIT_TAG main
 )
 FetchContent_GetProperties(uvwasi)
